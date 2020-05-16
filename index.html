@@ -10,14 +10,13 @@
   <form>
     <h2> Ce questionnaire est pour obtenir votre opinion sur l'IU <a href="https://www.premierleague.com/">suivante</a>.</h2>
     <br>
-    <br>
     <img src="images/PremierLeagueHomePage.PNG" alt="https://www.premierleague.com" width="700px" height="350px">
     <br>
     <br>
     <!-- Question 1 -->
     <div>
       <h3 class="question">1. Informations Personnelles:</h3>
-      <label for="firstName" id="fn">Prenom:</label>
+      <label for="firstName" id="fn">Prénom:</label>
       <input type="text" id="firstName"><br>
       <label for="lastName" id="ln">Nom de Famille:</label>
       <input type="text" id="lastName"><br>
@@ -30,10 +29,16 @@
     <!-- Question 2 & 3-->
     <div>
       <h3 class="question">2. Selon vous, quel est le meilleur trait de cette page?</h3>
-      <select id="cars">
+      <select id="best">
         <option value="display">La disposition des éléments</option>
         <option value="colours">Le choix de couleur</option>
         <option value="usability">L'utilisabilité de la page</option>
+      </select>
+      <h3 class="question">3. Selon vous, quel est le trait le plus pire de cette page?</h3>
+      <select id="worst">
+        <option value="display2">La disposition des éléments</option>
+        <option value="colours2">Le choix de couleur</option>
+        <option value="usability2">L'utilisabilité de la page</option>
       </select>
     </form>
   </body>
