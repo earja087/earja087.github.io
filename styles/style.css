@@ -48,7 +48,7 @@ table {
 td, th {
   border: 1px solid black;
   text-align: left;
-  margin: 7px;
+  padding: 7px;
 }
 
 th:nth-child(even) {
