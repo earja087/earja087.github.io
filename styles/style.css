@@ -1,5 +1,6 @@
 body {
-
+  padding: 50px;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -9,7 +10,12 @@ h1 {
 
 h2 {
   font-family: arial;
-  text-align: left;
+  text-align: center;
+}
+
+h3 {
+  font-family: arial;
+  text-align: center;
 }
 
 #fn, #ln {
@@ -21,6 +27,7 @@ div {
   border-radius: 15px;
   border: 1.5px solid #000000;
   padding: 50px;
+  background-color: #4169e1;
 }
 
 img {
