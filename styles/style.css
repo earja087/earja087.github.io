@@ -1,7 +1,8 @@
 body {
-  align: center
+  align: center;
 }
 
 h1 {
-  font-family: arial
+  font-family: arial;
+  text-align: center;
 }
