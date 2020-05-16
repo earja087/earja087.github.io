@@ -63,6 +63,8 @@ td:nth-child(even) {
   text-align: center;
   background-color: white;
   border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
 }
 
 img {
