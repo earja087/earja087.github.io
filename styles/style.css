@@ -42,12 +42,13 @@ div {
 table {
   font-family: arial;
   border-collapse: collapse;
-  width: 100%;
+  border-spacing: 0;
 }
 
 td, th {
   border: 1px solid black;
   text-align: left;
+  margin: 7px;
 }
 
 th:nth-child(even) {
@@ -58,8 +59,8 @@ td:nth-child(even) {
   background-color: #f5e7d6;
 }
 
-#likertTable {
-  align: center;
+#likertScale {
+  vertical-align: middle;
 }
 
 img {
