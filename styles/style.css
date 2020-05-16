@@ -39,6 +39,29 @@ div {
   background-color: white;
 }
 
+table {
+  font-family: arial;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+}
+
+th:nth-child(even) {
+  background-color: #f5e7d6;
+}
+
+td:nth-child(even) {
+  background-color: #f5e7d6;
+}
+
+#likertTable {
+  align: center;
+}
+
 img {
   display: block;
   margin-left: auto;
