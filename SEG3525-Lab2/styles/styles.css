@@ -6,12 +6,21 @@ body {
 
 #pageTitle {
   border-radius: 25px;
-  border: 2px solid #000000;
+  border: 2px solid #ffffff;
   padding: 20px;
   align: center;
   background-color: #ff6666;
 }
 
+#welcomeDiv {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 20px;
+  align: center;
+  background-color: #ffffff; 
+}
+
 h1 {
   text-align: center;
+  color: #ffffff;
 }
