@@ -17,7 +17,11 @@ body {
   border: 1px solid #000000;
   padding: 20px;
   align: center;
-  background-color: #ffffff; 
+  background-color: #ffffff;
+}
+
+#greetingParagraph {
+  font-family: arial;
 }
 
 h1 {
