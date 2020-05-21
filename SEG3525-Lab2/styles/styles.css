@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font-family: arial;
+  background-color: #e4c49b;
+}
+
+#pageTitle {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 20px;
+  align: center;
+  background-color: #ff6666;
+}
+
+h1 {
+  text-align: center;
+}
