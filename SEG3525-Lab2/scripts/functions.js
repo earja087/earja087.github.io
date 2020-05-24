@@ -1,4 +1,4 @@
-function openCity(evt, tabToBeOpened) {
+function openTab(evt, tabToBeOpened) {
 
   var counter, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabContent");
@@ -15,5 +15,5 @@ function openCity(evt, tabToBeOpened) {
 
   document.getElementById(tabToBeOpened).style.display = "block";
   evt.currentTarget.className += " active";
-  
+
 }
