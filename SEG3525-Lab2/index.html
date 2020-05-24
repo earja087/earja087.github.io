@@ -17,8 +17,19 @@
   </div>
   <br>
   <div class="tabOptions">
-    <button class="tabLink">À Propos</button>
-    <button class="tabLink">Nos Produits</button>
-    <button class="tabLink">Mon Panier</button>
+    <button class="tabLink" onclick="openTab(event, 'APropos')">À Propos</button>
+    <button class="tabLink" onclick="openTab(event, 'NosProduits')">Nos Produits</button>
+    <button class="tabLink" onclick="openTab(event, 'MonPanier')">Mon Panier</button>
   </div>
+  <!-- 3 divisions pages -->
+  <div id="APropos" class="tabContent">
+    <h2>A Propos</h2>
+  </div>
+  <div id="NosProduits" class="tabContent">
+    <h2>Nos Produits</h2>
+  </div>
+  <div id="MonPanier" class="tabContent">
+    <h2>Mon Panier</h2>
+  </div>
+  <script src="scripts/main.js"></script>
 </body>

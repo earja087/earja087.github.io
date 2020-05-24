@@ -31,8 +31,14 @@ h1 {
 
 .tabOptions {
   overflow: hidden;
-  border: 2px solid #000000;
+  border: 1px solid #cccccc;
   background-color: #ffffff;
+}
+
+.tabContent {
+  display: none;
+  padding: 5px;
+  border: 1px solid #cccccc;
 }
 
 .tabOptions button {
@@ -44,4 +50,8 @@ h1 {
   padding: 15px;
   transition: 0.5s;
   font-size: 15px;
+}
+
+.tabOptions button:hover {
+  background-color: #e6e6e6;
 }
