@@ -13,23 +13,35 @@
       Bienvenue à l'épicerie Tout-Pour-Vous. Si vous aviez des restrictions
       diététiques, veuillez les indiquer dans la section "À Propos" pour avoir
       des options faites pour vous dans la section "Nos Produits". N'oubliez pas de
-      visionner le tout dans votre "Mon Panier". </b></p>
+      visionner le tout dans "Mon Panier". </b></p>
   </div>
   <br>
   <div class="tabOptions">
-    <button class="tabLink" onclick="openTab(event, 'APropos')">À Propos</button>
-    <button class="tabLink" onclick="openTab(event, 'NosProduits')">Nos Produits</button>
-    <button class="tabLink" onclick="openTab(event, 'MonPanier')">Mon Panier</button>
+    <button class="tabLink" onclick="openTab(event, 'aPropos')">À Propos</button>
+    <button class="tabLink" onclick="openTab(event, 'nosProduits')">Nos Produits</button>
+    <button class="tabLink" onclick="openTab(event, 'monPanier')">Mon Panier</button>
   </div>
   <!-- 3 divisions pages -->
-  <div id="APropos" class="tabContent">
-    <h2>A Propos</h2>
+  <div id="aPropos" class="tabContent">
+    <h4>Indiquez vos restrictions diététiques, sinon, choisisissez "Aucune".</h4>
+    <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id, 'mesProduitsDisplay')">
+      <option value=""></option>
+      <option value="vegan">Végétarien(ne)</option>
+      <option value="gluten">Sans Gluten</option>
+      <option value="both">Végétarien(ne) et Sans Gluten</option>
+      <option value="none">Aucun</option>
+    </select>
   </div>
-  <div id="NosProduits" class="tabContent">
-    <h2>Nos Produits</h2>
+  <div id="nosProduits" class="tabContent">
+    <h4>Suite à votre choix dans le premier tab, voici les produits disponibles:</h4>
+    <div id="mesProduitsDisplay"></div>
+    <br>
+    <button id="ajoutPanier" type="button" class="block" onclick="produitsChoisis()">Ajouter ces produits au Panier</button>
   </div>
-  <div id="MonPanier" class="tabContent">
-    <h2>Mon Panier</h2>
+  <div id="monPanier" class="tabContent">
+    <h4>Voici les produits que vous avez choisi:</h4>
+    <div id="montrerPanier"></div>
   </div>
-  <script src="scripts/functions.js"></script>
+  <script src="scripts/fonctions.js"></script>
+  <script src="scripts/produits.js"></script>
 </body>
