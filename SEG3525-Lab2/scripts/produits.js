@@ -3,78 +3,113 @@ var produits = [
 		name: "Broccoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.95
 	},
 	{
 		name: "Pain",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
 		name: "Saumon",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 20.25
 	},
   {
     name: "Poulet",
     vegetarian: false,
     glutenFree: true,
+		organic: true,
     price: 15.50
   },
   {
     name: "Champignons",
     vegetarian: true,
     glutenFree: false,
+		organic: true,
     price: 5.05
   },
   {
     name: "Boeuf Frais",
     vegetarian: false,
     glutenFree: true,
+		organic: false,
     price: 17.85
   },
   {
     name: "Bananes",
     vegetarian: true,
     glutenFree: true,
+		organic: true,
     price: 3.75
   },
   {
     name: "Quinoa",
     vegetarian: true,
     glutenFree: true,
+		organic: false,
     price: 5.45
   },
   {
     name: "Lentilles",
     vegetarian: true,
     glutenFree: false,
+		organic: false,
     price: 6.50
   },
   {
     name: "Lait 2%",
     vegetarian: false,
     glutenFree: true,
+		organic: true,
     price: 4.25
   }
 ];
 
 function restrictionProduits(prods, restriction) {
 	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false)){
-			product_names.push(prods[i]);
+	var ckbox = document.getElementById('organicCheck');
+	if (ckbox.ischecked == true) {
+		alert("I have been checked");
+		for (let i=0; i<prods.length; i+=1) {
+			alert("I am in true");
+			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
+				product_names.push(prods[i]);
+				alert("I am adding with true");
+			}
+			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false) && (prods[i].organic == true)) {
+				product_names.push(prods[i]);
+				alert("I am adding with true");
+			}
+			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)) {
+				product_names.push(prods[i]);
+				alert("I am adding with true");
+			}
+			else if ((restriction == "none") && (prods[i].organic == true)) {
+				product_names.push(prods[i]);
+				alert("I am adding with true");
+			}
 		}
-		else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false)){
-			product_names.push(prods[i]);
-		}
-    else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-      product_names.push(prods[i]);
-    }
-		else if (restriction == "none"){
-			product_names.push(prods[i]);
+	} else {
+		alert("I am unchecked");
+		for (let i=0; i<prods.length; i+=1) {
+			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false)) {
+				product_names.push(prods[i]);
+			}
+			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false)) {
+				product_names.push(prods[i]);
+			}
+			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)) {
+				product_names.push(prods[i]);
+			}
+			else if (restriction == "none"){
+				product_names.push(prods[i]);
+			}
 		}
 	}
 
