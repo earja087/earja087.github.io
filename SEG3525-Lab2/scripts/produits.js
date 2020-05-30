@@ -75,7 +75,6 @@ function restrictionProduits(prods, restriction) {
 	let product_names = [];
 	var ckbox = document.getElementById('organicCheck');
 	if (ckbox.ischecked) {
-		alert("I have been checked");
 		for (let i=0; i<prods.length; i+=1) {
 			alert("I am in true");
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
@@ -96,7 +95,6 @@ function restrictionProduits(prods, restriction) {
 			}
 		}
 	} else {
-		alert("I am unchecked");
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false)) {
 				product_names.push(prods[i]);
