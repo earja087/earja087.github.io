@@ -10,10 +10,10 @@
   <ul class="breadcrumb">
     <li><a href="../index.html">Page Principale</a></li>
     <li><a href="./about.html">À Propos</a></li>
-    <li><a href="#">Nos Produits</a></li>
+    <li><a href="./products.html">Nos Produits</a></li>
     <li><a href="#">Votre Panier</a></li>
   </ul>
-  <div id="aPropos" class="tabContent">
+  <div id="aPropos">
     <h4>Indiquez vos restrictions diététiques, sinon, choisisissez "Aucun".</h4>
     <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id, 'mesProduitsDisplay')">
       <option value=""></option>
@@ -27,5 +27,7 @@
     <input type="checkbox" id="organicCheck" onchange="personalizedProducts('foodRestrictions', 'mesProduitsDisplay')">
   </div>
   <p><i><b>Site conçu par Elie Arja</b></i></p>
+  <script src="../scripts/fonctions.js"></script>
+  <script src="../scripts/produits.js"></script>
 </body>
 </html>
