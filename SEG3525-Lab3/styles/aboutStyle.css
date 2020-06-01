@@ -1,0 +1,51 @@
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "\203a";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+body {
+  padding: 50px;
+  font-family: helvetica;
+  background-color: #99ffff;
+}
+
+#pageTitle {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  align: center;
+  background-color: #ff9900;
+}
+
+#aPropos {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px 5px 10px 10px;
+  align: center;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
