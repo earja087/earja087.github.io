@@ -7,11 +7,11 @@ var produits = [
 		price: 1.95
 	},
 	{
-		name: "Pain",
-		vegetarian: true,
+		name: "Cheddar",
+		vegetarian: false,
 		glutenFree: false,
 		organic: false,
-		price: 2.35
+		price: 4.95
 	},
 	{
 		name: "Saumon",
