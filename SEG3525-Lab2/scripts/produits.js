@@ -78,19 +78,15 @@ function restrictionProduits(prods, restriction) {
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
-				alert("I am adding with true");
 			}
 			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
-				alert("I am adding with true");
 			}
 			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
-				alert("I am adding with true");
 			}
 			else if ((restriction == "none") && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
-				alert("I am adding with true");
 			}
 		}
 	} else {
