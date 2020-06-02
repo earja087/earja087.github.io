@@ -1,0 +1,55 @@
+/* Main page stuff */
+body {
+  padding: 50px;
+  font-family: sans-serif;
+  background-color: #99ffff;
+}
+
+#pageTitle {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  align: center;
+  background-color: #ff9900;
+}
+
+#welcomeDiv {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 10px;
+  align: center;
+  background-color: #ffffff;
+}
+
+#greetingParagraph {
+  font-family: arial;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Styling for rows */
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  float: up;
+  width: 100%;
+  padding: 5px 5px 10px 10px;
+  height: auto;
+  border: 1px solid black;
+}
+
+.column:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    width: 100%;
+  }

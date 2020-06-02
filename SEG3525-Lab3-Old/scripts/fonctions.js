@@ -1,4 +1,25 @@
 // Pris de w3schools et du code de Pr. Barrière
+// Fonction pour ouvrir le bon tab.
+function openTab(evt, tabToBeOpened) {
+
+  var counter, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabContent");
+
+  for (counter = 0; counter < tabcontent.length; counter++) {
+    tabcontent[counter].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tabLink");
+
+  for (counter = 0; counter < tablinks.length; counter++) {
+    tablinks[counter].className = tablinks[counter].className.replace(" active", "");
+  }
+
+  document.getElementById(tabToBeOpened).style.display = "block";
+  evt.currentTarget.className += " active";
+
+}
+
 // Fonction qui ajoute les produits en se basant de la séléction
 function personalizedProducts(slct1, slct2) {
   var s1 = document.getElementById(slct1);
@@ -49,6 +70,7 @@ function produitsChoisis(){
 
 	// build list of selected item
 	var para = document.createElement("P");
+	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));

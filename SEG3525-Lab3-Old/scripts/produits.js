@@ -74,19 +74,24 @@ var produits = [
 function restrictionProduits(prods, restriction) {
 	let product_names = [];
 	var ckbox = document.getElementById('organicCheck');
-	if (ckbox.checked) {
+	if (ckbox.ischecked) {
 		for (let i=0; i<prods.length; i+=1) {
+			alert("I am in true");
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
+				alert("I am adding with true");
 			}
 			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
+				alert("I am adding with true");
 			}
 			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
+				alert("I am adding with true");
 			}
 			else if ((restriction == "none") && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
+				alert("I am adding with true");
 			}
 		}
 	} else {
