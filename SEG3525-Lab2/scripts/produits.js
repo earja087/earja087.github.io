@@ -74,7 +74,7 @@ var produits = [
 function restrictionProduits(prods, restriction) {
 	let product_names = [];
 	var ckbox = document.getElementById('organicCheck');
-	if (ckbox.ischecked) {
+	if (ckbox.checked) {
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
