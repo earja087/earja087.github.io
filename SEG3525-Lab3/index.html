@@ -17,38 +17,45 @@
       diététiques, veuillez les indiquer dans la section "À Propos" pour avoir
       des options faites pour vous dans la section "Nos Produits". N'oubliez pas de
       visionner le tout dans "Votre Panier". </b></p>
-  </div><br>
-  <!-- Division of information. Inspired by https://www.w3schools.com/howto/howto_css_three_columns.asp with a twist-->
-  <div class="column">
-    <div id="aPropos" class="row" style="background-color:#d9d9d9">
-      <h2>À Propos</h2>
-      <h4>Indiquez vos préférences diététiques, sinon, choisisissez "Aucun".</h4>
-      <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id, 'mesProduitsDisplay')">
-        <option value=""></option>
-        <option value="vegan">Je suis Végétarien(ne)</option>
-        <option value="gluten">Je veux des produits Sans Gluten</option>
-        <option value="both">Je suis Végétarien(ne) et je veux des produits Sans Gluten</option>
-        <option value="none">Aucune Préférence</option>
-      </select>
-      <br><br>
-      <label for="organicCheck">Voulez-vous voir nos produits organiques ?</label>
-      <input type="checkbox" id="organicCheck" onclick="personalizedProducts('foodRestrictions', 'mesProduitsDisplay')">
+    </div><br>
+    <!-- Division of information. Inspired by https://www.w3schools.com/howto/howto_css_three_columns.asp with a twist-->
+    <div class="column">
+      <div id="aPropos" class="row" style="background-color:#d9d9d9">
+        <h2>À Propos</h2>
+        <h4>Indiquez vos préférences diététiques, sinon, choisisissez "Aucun".</h4>
+        <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id, 'mesProduitsDisplay')">
+          <option value=""></option>
+          <option value="vegan">Je suis Végétarien(ne)</option>
+          <option value="gluten">Je veux des produits Sans Gluten</option>
+          <option value="both">Je suis Végétarien(ne) et je veux des produits Sans Gluten</option>
+          <option value="none">Aucune Préférence</option>
+        </select>
+        <br><br>
+        <label for="organicCheck">Voulez-vous voir nos produits organiques ?</label>
+        <input type="checkbox" id="organicCheck" onclick="personalizedProducts('foodRestrictions', 'mesProduitsDisplay')">
+      </div>
+      <div id="nosProduits" class="row" style="background-color:#f2f2f2;">
+        <h2>Nos Produits</h2>
+        <h4>Suite à votre choix, voici les produits disponibles:</h4>
+        <div id="mesProduitsDisplay"></div>
+        <!-- Accordion inspired by https://www.w3schools.com/howto/howto_js_accordion.asp -->
+        <button class="accordion">Section 1</button>
+        <div class="panel"> <p>Hi</p> </div>
+        <button class="accordion">Section 2</button>
+        <div class="panel"> <p>Hi</p> </div>
+        <button class="accordion">Section 3</button>
+        <div class="panel"> <p>Hi</p> </div>
+        <br>
+        <button id="ajoutPanier" type="button" class="block" onclick="produitsChoisis()">Ajouter ces produits au panier</button>
+      </div>
+      <div id="monPanier" class="row" style="background-color:#ffffff;">
+        <h2>Votre Panier</h2>
+        <h4>Voici les produits que vous avez choisi:</h4>
+        <div id="montrerPanier"></div>
+      </div>
     </div>
-    <div class="row" id="nosProduits" style="background-color:#f2f2f2;">
-      <h2>Nos Produits</h2>
-      <h4>Suite à votre choix, voici les produits disponibles:</h4>
-      <div id="mesProduitsDisplay"></div>
-      <br>
-      <button id="ajoutPanier" type="button" class="block" onclick="produitsChoisis()">Ajouter ces produits au panier</button>
-    </div>
-    <div class="row" id="monPanier" style="background-color:#ffffff;">
-      <h2>Votre Panier</h2>
-      <h4>Voici les produits que vous avez choisi:</h4>
-      <div id="montrerPanier"></div>
-    </div>
-  </div>
-  <p><i><b>Site conçu par Elie Arja</b></i></p>
-  <script src="scripts/fonctions.js"></script>
-  <script src="scripts/produits.js"></script>
-</body>
-</html>
+    <p><i><b>Site conçu par Elie Arja</b></i></p>
+    <script src="scripts/fonctions.js"></script>
+    <script src="scripts/produits.js"></script>
+  </body>
+  </html>

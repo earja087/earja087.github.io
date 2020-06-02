@@ -105,16 +105,13 @@ function restrictionProduits(prods, restriction) {
 			}
 		}
 	}
-
   // Sorting function taken from https://www.w3schools.com/js/js_array_sort.asp
   product_names.sort(function(a, b)
   {
     return a.price - b.price
   });
-
 	return product_names;
 }
-
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<produits.length; i+=1) {
