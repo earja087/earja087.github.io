@@ -76,7 +76,6 @@ function restrictionProduits(prods, restriction) {
 	var ckbox = document.getElementById('organicCheck');
 	if (ckbox.ischecked) {
 		for (let i=0; i<prods.length; i+=1) {
-			alert("I am in true");
 			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
 				alert("I am adding with true");
