@@ -23,7 +23,7 @@
       <div id="aPropos" class="row" style="background-color:#d9d9d9">
         <h2>À Propos</h2>
         <h4>Indiquez vos préférences diététiques, sinon, choisisissez "Aucun".</h4>
-        <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id, 'mesProduitsDisplay')">
+        <select id="foodRestrictions" name="foodRestrictions" onchange="personalizedProducts(this.id)">
           <option value=""></option>
           <option value="vegan">Je suis Végétarien(ne)</option>
           <option value="gluten">Je veux des produits Sans Gluten</option>
@@ -32,7 +32,7 @@
         </select>
         <br><br>
         <label for="organicCheck">Voulez-vous voir nos produits organiques ?</label>
-        <input type="checkbox" id="organicCheck" onclick="personalizedProducts('foodRestrictions', 'mesProduitsDisplay')">
+        <input type="checkbox" id="organicCheck" onclick="personalizedProducts('foodRestrictions')">
       </div>
       <div id="nosProduits" class="row" style="background-color:#f2f2f2;">
         <h2>Nos Produits</h2>
@@ -40,13 +40,13 @@
         <!--div id="mesProduitsDisplay"></div-->
         <!-- Accordion inspired by https://www.w3schools.com/howto/howto_js_accordion.asp -->
         <button class="accordion">Fruits et Légumes</button>
-        <div class="panel" id="mesProduitsDisplay"><br></div>
+        <div class="panel" id="fruitsAndVeggies"><br></div>
         <button class="accordion">Produits Laitiers</button>
-        <div class="panel"><br></div>
+        <div class="panel" id="diary"><br></div>
         <button class="accordion">Viandes</button>
-        <div class="panel"><br></div>
+        <div class="panel" id="meat"><br></div>
         <button class="accordion">Graines</button>
-        <div class="panel"><br></div>
+        <div class="panel" id="grains"><br></div>
         <br>
         <button id="ajoutPanier" type="button" class="block" onclick="produitsChoisis()">Ajouter ces produits au panier</button>
       </div>

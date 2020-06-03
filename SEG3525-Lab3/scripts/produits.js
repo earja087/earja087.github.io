@@ -4,70 +4,80 @@ var produits = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price: 1.95
+		price: 1.95,
+		category: "fruitsAndVeggies"
 	},
 	{
 		name: "Cheddar",
 		vegetarian: false,
 		glutenFree: false,
 		organic: false,
-		price: 4.95
+		price: 4.95,
+		category: "diary"
 	},
 	{
 		name: "Saumon",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 20.25
+		price: 20.25,
+		category: "meat"
 	},
   {
     name: "Poulet",
     vegetarian: false,
     glutenFree: true,
 		organic: true,
-    price: 15.50
+    price: 15.50,
+		category: "meat"
   },
   {
     name: "Champignons",
     vegetarian: true,
     glutenFree: false,
 		organic: true,
-    price: 5.05
+    price: 5.05,
+		category: "fruitsAndVeggies"
   },
   {
-    name: "Boeuf Frais",
+    name: "Boeuf",
     vegetarian: false,
     glutenFree: true,
 		organic: false,
-    price: 17.85
+    price: 17.85,
+		category: "meat"
   },
   {
     name: "Bananes",
     vegetarian: true,
     glutenFree: true,
 		organic: true,
-    price: 3.75
+    price: 3.75,
+		category: "fruitsAndVeggies"
   },
   {
     name: "Quinoa",
     vegetarian: true,
     glutenFree: true,
 		organic: false,
-    price: 5.45
+    price: 5.45,
+		category: "grains"
   },
   {
     name: "Lentilles",
     vegetarian: true,
     glutenFree: false,
 		organic: false,
-    price: 6.50
+    price: 6.50,
+		category: "grains"
   },
   {
-    name: "Lait 2%",
+    name: "Lait",
     vegetarian: false,
     glutenFree: true,
 		organic: true,
-    price: 4.25
+    price: 4.25,
+		category: "diary"
   }
 ];
 
