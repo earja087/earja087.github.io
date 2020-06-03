@@ -86,10 +86,10 @@ function restrictionProduits(prods, restriction) {
 	var ckbox = document.getElementById('organicCheck');
 	if (ckbox.checked) {
 		for (let i=0; i<prods.length; i+=1) {
-			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false) && (prods[i].organic == true)) {
+			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
 			}
-			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false) && (prods[i].organic == true)) {
+			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].organic == true)) {
 				product_names.push(prods[i]);
 			}
 			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)) {
@@ -101,10 +101,10 @@ function restrictionProduits(prods, restriction) {
 		}
 	} else {
 		for (let i=0; i<prods.length; i+=1) {
-			if ((restriction == "vegan") && (prods[i].vegetarian == true) && (prods[i].glutenFree == false)) {
+			if ((restriction == "vegan") && (prods[i].vegetarian == true)) {
 				product_names.push(prods[i]);
 			}
-			else if ((restriction == "gluten") && (prods[i].glutenFree == true) && (prods[i].vegetarian == false)) {
+			else if ((restriction == "gluten") && (prods[i].glutenFree == true)) {
 				product_names.push(prods[i]);
 			}
 			else if ((restriction == "both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)) {
