@@ -48,7 +48,7 @@
         <tr>
           <td>Manbun</td>
           <td><img src="images/Manbun.jpg" style="width:140px; height:175px"></td>
-          <td>17.50$</td>
+          <td>17.49$</td>
         </tr>
         <tr>
           <td>Cornrows</td>
@@ -79,8 +79,64 @@
   </div>
   <div class="container border p-3 my-3">
     <h4 class="display-4">Prendre Rendez-Vous</h4>
-    <p>Établi en 2001, nos salons garantissent la meilleure qualité
-      de coupes de cheveux. "Look good, feel good" est notre devise.</p>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapseService">Choisissez la coiffure</a>
+        </div>
+        <div id="collapseService" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <p><b>Indiquez votre choix</b></p>
+            <input type="radio" id="undercut" name="style" value="undercut">
+            <label for="Undercut">Undercut - 19.99$</label><br>
+            <input type="radio" id="buzzcut" name="style" value="buzzcut">
+            <label for="Undercut">Buzzcut - 15.99$</label><br>
+            <input type="radio" id="manbun" name="style" value="manbun">
+            <label for="Undercut">Manbun- 17.49$</label><br>
+            <input type="radio" id="cornrows" name="style" value="cornrows">
+            <label for="Undercut">Cornrows - 19.99$</label><br>
+            <label for="beardcare">Aimeriez-vous prendre soin de votre barbe pour 9.99$ ?</label>
+            <input type="checkbox" id="beardcare">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choisissez la date</a>
+          </div>
+          <div id="collapseDate" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><b>Choisissez la date qui vous convient</b></p>
+              <div class="form-group row">
+                <label for="dateTimeInput" class="col-2 col-form-label">Jour et temps</label>
+                <div class="col-10">
+                  <input class="form-control" type="datetime-local" value="2020-06-09T12:00:00" id="dateTimeInput">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Vos Informations</a>
+          </div>
+          <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><b>Remplissez cette section pour confirmer le RV</b></p>
+              <label for="firstName" id="fn">Prénom:</label>
+              <input type="text" id="firstName"><br>
+              <label for="lastName" id="ln">Nom de Famille:</label>
+              <input type="text" id="lastName"><br>
+              <label for="phone" id="phone">Numéro de Téléphone:</label>
+              <input type="text" id="phone"><br>
+              <label for="email" id="emailLbl">Adresse Courriel:</label>
+              <input type="text" id="email"><br>
+              <label for="creditCard" id="cc">Carte de Crédit:</label>
+              <input type="text" id="creditCard"><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
