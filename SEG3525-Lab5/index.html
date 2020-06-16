@@ -1,0 +1,171 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Your own additional style sheet -->
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>Fresh Cutz</title>
+</head>
+<body>
+  <div class="container bg-dark text-white my-3 p-3" id="banner">
+    <h1 class="display-1">Salon Fresh Cutz</h1><br>
+    <p>Pour les meilleurs coiffures, venez chez nous!</p>
+  </div>
+  <div class="container border p-3 my-3">
+    <h4 class="display-4">À Propos</h4>
+    <p>Établi en 2001, nos salons garantissent la meilleure qualité
+    de coupes de cheveux. "Look good, feel good" est notre devise.</p>
+  </div>
+  <div class="container bg-warning border p-3 my-3">
+    <h4 class="display-4">Qu'Offrons-Nous ?</h4><br>
+    <h5>Avec les coiffures, on peut prendre soin de vos barbes pour 9.99$</h5><br>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Example</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Undercut</td>
+          <td><img src="images/Undercut.jpg" style="width:240px; height:136px"></td>
+          <td>19.99$</td>
+        </tr>
+        <tr>
+          <td>Buzzcut</td>
+          <td><img src="images/Buzzcut.jpg" style="width:140px; height:175px"></td>
+          <td>15.99$</td>
+        </tr>
+        <tr>
+          <td>Manbun</td>
+          <td><img src="images/Manbun.jpg" style="width:140px; height:175px"></td>
+          <td>17.49$</td>
+        </tr>
+        <tr>
+          <td>Cornrows</td>
+          <td><img src="images/Cornrows.jpg" style="width:150px; height:150px"></td>
+          <td>19.99$</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container border my-3 p-3 bg-primary text-white">
+    <h4 class="display-4">Où Nous Rejoindre?</h4>
+    <div class="card-columns mt-3">
+      <div class="card bg-info" style="width:100%">
+        <img class="card-img-top" src="images/rideau-mall.png" alt="Centre Rideau" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Centre Rideau</h4>
+          <p class="card-text">50 rue Rideau</p>
+        </div>
+      </div>
+      <div class="card bg-info" style="width:100%">
+        <img class="card-img-top" src="images/stlaurent-mall.png" alt="Centre Rideau" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Centre St Laurent</h4>
+          <p class="card-text">1200 boulevard St Laurent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-dark">
+    <h2 class="display-4 text-light">Nos Coiffeurs</h2>
+    <div class="card-columns">
+      <div class="card" style="width:200px">
+        <img class="card-img-top" src="images/Jackson.jpg" alt="Jackson" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Jackson</h4>
+          <p class="card-text">Notre spécialiste de</p>
+          <!-- collapsible part -->
+          <a href="#profile" class="btn btn-primary" data-toggle="collapse">Plus d'info</a>
+          <div id="profile" class="collapse p-3">
+            <p>Jackson est notre expert depuis 15 ans et a coiffé plusieurs célébrités.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width:200px">
+        <img class="card-img-top" src="images/Mike.jpg" alt="Mike" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Mike</h4>
+          <p class="card-text">L'expert de barbes</p>
+          <!-- collapsible part -->
+          <a href="#profile2" class="btn btn-primary" data-toggle="collapse">Plus d'info</a>
+          <div id="profile2" class="collapse p-3">
+            <p>Mike est un jeune coiffeur qui n'accepte que la perfection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border p-3 my-3">
+    <h4 class="display-4">Prendre Rendez-Vous</h4>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapseService">Choisissez la coiffure</a>
+        </div>
+        <div id="collapseService" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <p><b>Indiquez votre choix</b></p>
+            <input type="radio" id="undercut" name="style" value="undercut">
+            <label for="Undercut">Undercut - 19.99$</label><br>
+            <input type="radio" id="buzzcut" name="style" value="buzzcut">
+            <label for="Undercut">Buzzcut - 15.99$</label><br>
+            <input type="radio" id="manbun" name="style" value="manbun">
+            <label for="Undercut">Manbun- 17.49$</label><br>
+            <input type="radio" id="cornrows" name="style" value="cornrows">
+            <label for="Undercut">Cornrows - 19.99$</label><br>
+            <label for="beardcare">Aimeriez-vous prendre soin de votre barbe pour 9.99$ ?</label>
+            <input type="checkbox" id="beardcare">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choisissez la date</a>
+          </div>
+          <div id="collapseDate" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><b>Choisissez la date qui vous convient</b></p>
+              <div class="form-group row">
+                <label for="dateTimeInput" class="col-2 col-form-label">Jour et temps</label>
+                <div class="col-10">
+                  <input class="form-control" type="datetime-local" value="2020-06-09T12:00:00" id="dateTimeInput">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Vos Informations</a>
+          </div>
+          <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><b>Remplissez cette section pour confirmer le RV</b></p>
+              <label for="firstName" id="fn">Prénom:</label>
+              <input type="text" id="firstName"><br>
+              <label for="lastName" id="ln">Nom de Famille:</label>
+              <input type="text" id="lastName"><br>
+              <label for="phone" id="phone">Numéro de Téléphone:</label>
+              <input type="text" id="phone"><br>
+              <label for="email" id="emailLbl">Adresse Courriel:</label>
+              <input type="text" id="email"><br>
+              <label for="creditCard" id="cc">Carte de Crédit:</label>
+              <input type="text" id="creditCard"><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
