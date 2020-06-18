@@ -6,16 +6,38 @@
 // Regular expressions can get complex, you can think in terms of a series of characters
 // or numbers
 function validatePhone(txtPhone) {
-    var a = document.getElementById(txtPhone).value;
-    // This filter asks for something like (12345), so parentheses with any number (at least 1)
-    // of digits
-    var filter = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
-    if (filter.test(a)) {
-        return true;
-    }
-    else {
-        return false;
-    }
+  var a = document.getElementById(txtPhone).value;
+  // This filter asks for something like (12345), so parentheses with any number (at least 1)
+  // of digits
+  var filter = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+  if (filter.test(a)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/
+
+function validateEmail(emailLink) {
+  var a = document.getElementById(emailLink).value;
+  var filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (filter.test(a)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function validateCard(card) {
+  var a = document.getElementById(card).value;
+  var filter = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+  if (filter.test(a)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 
@@ -23,72 +45,102 @@ function validatePhone(txtPhone) {
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+var unavailableDates = ["07/01/2020"]
 const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() == 0)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) == -1 ]
+  // Sunday is Day 0, disable all Sundays
+  var barber = document.getElementById("barberChoice").value;
+  if (barber == "jackson") {
+    if (date.getDay() == 0 || date.getDay() == 5 || date.getDay() == 6){
+      return [false];
+    }
+  } else {
+    if (date.getDay() == 0 || date.getDay() == 4 || date.getDay() == 6){
+      return [false];
+    }
+  }
+  var string = jQuery.datepicker.formatDate(setDateFormat, date);
+  return [ unavailableDates.indexOf(string) == -1 ]
 }
 
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
-    // phone validation, it calls validatePhone
-    // and also some feedback as an Alert + putting a value in the input that shows the format required
-    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
-    // The "error" class in style.css defines yellow background and red foreground
-    $("#phone").on("change", function(){
-        if (!validatePhone("phone")){
-            alert("Wrong format for phone");
-            $("#phone").val("(xxx) xxx-xxxx");
-            $("#phone").addClass("error");
-        }
-        else {
-            $("#phone").removeClass("error");
-        }
-    });
+  // phone validation, it calls validatePhone
+  // and also some feedback as an Alert + putting a value in the input that shows the format required
+  // the "addClass" will use the class "error" defined in style.css and add it to the phone input
+  // The "error" class in style.css defines yellow background and red foreground
+  $("#phone").on("change", function(){
+    if (!validatePhone("phone")){
+      alert("Numero invalide!");
+      $("#phone").val("(XXX) XXX-XXXX | XXX-XXX-XXXX");
+      $("#phone").addClass("error");
+    }
+    else {
+      $("#phone").removeClass("error");
+    }
+  });
 
-    // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
-    // You can try different themes (the names are under the calendars) / This is Excite Bike
-    // To use a different theme you must include its css in your HTML file.
-    // The one I included in my HTML is the Excite Bike, but you can try others
+  $("#email").on("change", function(){
+    if (!validateEmail("email")){
+      alert("Adresse invalide!");
+      $("#email").val("______@____.__");
+      $("#email").addClass("error");
+    }
+    else {
+      $("#email").removeClass("error");
+    }
+  });
 
-    // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
-    // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: new Date('06/18/2020'),
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
-        }
-    );
+  $("#creditCard").on("change", function(){
+    if (!validateCard("creditCard")){
+      alert("Carte invalide!");
+      $("#creditCard").val("XXXX XXXX XXXX XXXX");
+      $("#creditCard").addClass("error");
+    }
+    else {
+      $("#creditCard").removeClass("error");
+    }
+  });
 
-    // Look at the different events on which an action can be performed
-    // https://www.w3schools.com/jquery/jquery_events.asp
-    // Here, we put
-    $("#creditCard").on("mouseenter", function(){
-        $("#creditCard").addClass("showInput");
-    });
+  // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
+  // You can try different themes (the names are under the calendars) / This is Excite Bike
+  // To use a different theme you must include its css in your HTML file.
+  // The one I included in my HTML is the Excite Bike, but you can try others
 
-    $("#creditCard").on("mouseleave", function(){
-        $("#creditCard").removeClass("showInput");
-    });
+  // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
+  // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
+  $( "#dateTimeInput" ).datepicker(
+    {
+      dateFormat: setDateFormat,
+      // no calendar before June 1rst 2020
+      minDate: new Date('06/18/2020'),
+      maxDate: '+4M',
+      // used to disable some dates
+      beforeShowDay: $.datepicker.noWeekends,
+      beforeShowDay: disableDates
+    }
+  );
 
-    // https://jqueryui.com/tooltip/
-    // The class "highlight" used here is predefined in JQuery UI
-    // the message of the tooltip is encoded in the input (in the HTML file)
-    $("#creditCard").tooltip({
-        classes: {
-          "ui-tooltip": "highlight"
-        }
-      });
+  // Look at the different events on which an action can be performed
+  // https://www.w3schools.com/jquery/jquery_events.asp
+  // Here, we put
+  $("#creditCard").on("mouseenter", function(){
+    $("#creditCard").addClass("showInput");
+  });
+
+  $("#creditCard").on("mouseleave", function(){
+    $("#creditCard").removeClass("showInput");
+  });
+
+  // https://jqueryui.com/tooltip/
+  // The class "highlight" used here is predefined in JQuery UI
+  // the message of the tooltip is encoded in the input (in the HTML file)
+  $("#creditCard").tooltip({
+    classes: {
+      "ui-tooltip": "highlight"
+    }
+  });
 });

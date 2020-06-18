@@ -160,15 +160,17 @@
         </div>
         <div class="card">
           <div class="card-header">
-            <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choisissez le coiffeur</a>
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseCoiffeur">Choisissez le coiffeur</a>
           </div>
-          <div id="collapseDate" class="collapse" data-parent="#accordion">
+          <div id="collapseCoiffeur" class="collapse" data-parent="#accordion">
             <div class="card-body">
               <p><b>Choisissez votre coiffeur</b></p>
               <select id="barberChoice" name="hairstylistChoice">
                 <option value="jackson">Jackson</option>
                 <option value="mike">Mike</option>
               </select>
+              <p><i>* Veuillez notez que Jackson n'est pas disponible Vendredi.</i></p>
+              <p><i>* Veuillez notez que Mike n'est pas disponible Jeudi.</i></p>
             </div>
           </div>
         </div>
@@ -180,9 +182,9 @@
             <div class="card-body">
               <p><b>Choisissez la date qui vous convient</b></p>
               <div class="form-group row">
-                <label for="dateTimeInput" class="col-2 col-form-label">Jour et temps</label>
+                <label for="dateTimeInput" class="col-2 col-form-label">Jour</label>
                 <div class="col-10">
-                  <input class="form-control" type="datetime-local" value="2020-06-09T12:00:00" id="dateTimeInput">
+                  <input type="text" id="dateTimeInput">
                 </div>
               </div>
             </div>
@@ -204,7 +206,7 @@
               <label for="email" id="emailLbl">Adresse Courriel:</label>
               <input type="text" id="email"><br>
               <label for="creditCard" id="cc">Carte de Crédit:</label>
-              <input type="text" id="creditCard"><br>
+              <input type="text" id="creditCard" title="Si vous ne venez pas le jour du RV, 30$ sera chargé."><br>
             </div>
           </div>
         </div>
