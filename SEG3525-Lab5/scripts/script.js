@@ -9,7 +9,7 @@ function validatePhone(txtPhone) {
   var a = document.getElementById(txtPhone).value;
   // This filter asks for something like (12345), so parentheses with any number (at least 1)
   // of digits
-  var filter = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+  var filter = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
   if (filter.test(a)) {
     return true;
   }
@@ -20,6 +20,7 @@ function validatePhone(txtPhone) {
 
 function validateEmail(emailLink) {
   var a = document.getElementById(emailLink).value;
+  // https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
   var filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (filter.test(a)) {
     return true;
@@ -31,7 +32,7 @@ function validateEmail(emailLink) {
 
 function validateCard(card) {
   var a = document.getElementById(card).value;
-  var filter = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+  var filter = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/; //https://regex101.com/
   if (filter.test(a)) {
     return true;
   }
@@ -135,10 +136,65 @@ $(document).ready(function(){
     $("#creditCard").removeClass("showInput");
   });
 
+  $("#firstName").on("mouseenter", function(){
+    $("#firstName").addClass("showInput");
+  });
+
+  $("#firstName").on("mouseleave", function(){
+    $("#firstName").removeClass("showInput");
+  });
+
+  $("#lastName").on("mouseenter", function(){
+    $("#lastName").addClass("showInput");
+  });
+
+  $("#lastName").on("mouseleave", function(){
+    $("#lastName").removeClass("showInput");
+  });
+
+  $("#email").on("mouseenter", function(){
+    $("#email").addClass("showInput");
+  });
+
+  $("#email").on("mouseleave", function(){
+    $("#email").removeClass("showInput");
+  });
+
+  $("#phone").on("mouseenter", function(){
+    $("#phone").addClass("showInput");
+  });
+
+  $("#phone").on("mouseleave", function(){
+    $("#phone").removeClass("showInput");
+  });
   // https://jqueryui.com/tooltip/
   // The class "highlight" used here is predefined in JQuery UI
   // the message of the tooltip is encoded in the input (in the HTML file)
   $("#creditCard").tooltip({
+    classes: {
+      "ui-tooltip": "highlight"
+    }
+  });
+
+  $("#firstName").tooltip({
+    classes: {
+      "ui-tooltip": "highlight"
+    }
+  });
+
+  $("#lastName").tooltip({
+    classes: {
+      "ui-tooltip": "highlight"
+    }
+  });
+
+  $("#phone").tooltip({
+    classes: {
+      "ui-tooltip": "highlight"
+    }
+  });
+
+  $("#email").tooltip({
     classes: {
       "ui-tooltip": "highlight"
     }
