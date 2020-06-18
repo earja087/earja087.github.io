@@ -9,21 +9,51 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <!-- Your own additional style sheet -->
-  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="styles/styles.css" rel="stylesheet" type="text/css">
+  <script src="scripts/script.js"></script>
   <title>Fresh Cutz</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Menu - Fresh Cutz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#first"><img src="images/aboutUs.jpg" alt="logo" id="logo" style="width:30px;"> À Propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#second"><img src="images/services.png" id="logo" alt="logo" style="width:30px;"> Qu'Offrons-Nous ?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#third"><img src="images/location.png" id="logo" alt="logo" style="width:30px;"> Où Nous Rejoindre?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fourth"><img src="images/staff.png" id="logo" alt="logo" style="width:30px;"> Nos Coiffeurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fifth"><img src="images/booking.png" id="logo" alt="logo" style="width:30px;"> Prendre Rendez-Vous</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="container bg-dark text-white my-3 p-3" id="banner">
     <h1 class="display-1">Salon Fresh Cutz</h1><br>
     <p>Pour les meilleurs coiffures, venez chez nous!</p>
   </div>
-  <div class="container border p-3 my-3">
-    <h4 class="display-4">À Propos</h4>
+  <div id="first" class="container border p-3 my-3">
+    <h4 id="first "class="display-4">À Propos</h4>
     <p>Établi en 2001, nos salons garantissent la meilleure qualité
     de coupes de cheveux. "Look good, feel good" est notre devise.</p>
   </div>
-  <div class="container bg-warning border p-3 my-3">
+  <div id="second" class="container bg-warning border p-3 my-3">
     <h4 class="display-4">Qu'Offrons-Nous ?</h4><br>
     <h5>Avec les coiffures, on peut prendre soin de vos barbes pour 9.99$</h5><br>
     <table class="table table-dark">
@@ -58,7 +88,7 @@
       </tbody>
     </table>
   </div>
-  <div class="container border my-3 p-3 bg-primary text-white">
+  <div id="third" class="container border my-3 p-3 bg-primary text-white">
     <h4 class="display-4">Où Nous Rejoindre?</h4>
     <div class="card-columns mt-3">
       <div class="card bg-info" style="width:100%">
@@ -77,14 +107,14 @@
       </div>
     </div>
   </div>
-  <div class="container p-3 my-3 bg-dark">
+  <div id="fourth" class="container p-3 my-3 bg-dark">
     <h2 class="display-4 text-light">Nos Coiffeurs</h2>
     <div class="card-columns">
       <div class="card" style="width:200px">
         <img class="card-img-top" src="images/Jackson.jpg" alt="Jackson" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Jackson</h4>
-          <p class="card-text">Notre spécialiste de</p>
+          <p class="card-text">Notre spécialiste de coiffures</p>
           <!-- collapsible part -->
           <a href="#profile" class="btn btn-primary" data-toggle="collapse">Plus d'info</a>
           <div id="profile" class="collapse p-3">
@@ -106,7 +136,7 @@
       </div>
     </div>
   </div>
-  <div class="container border p-3 my-3">
+  <div id="fifth" class="container border p-3 my-3">
     <h4 class="display-4">Prendre Rendez-Vous</h4>
     <div id="accordion">
       <div class="card">
@@ -130,6 +160,20 @@
         </div>
         <div class="card">
           <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choisissez le coiffeur</a>
+          </div>
+          <div id="collapseDate" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><b>Choisissez votre coiffeur</b></p>
+              <select id="barberChoice" name="hairstylistChoice">
+                <option value="jackson">Jackson</option>
+                <option value="mike">Mike</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
             <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choisissez la date</a>
           </div>
           <div id="collapseDate" class="collapse" data-parent="#accordion">
@@ -146,7 +190,7 @@
         </div>
         <div class="card">
           <div class="card-header">
-            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Vos Informations</a>
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Entrez Vos Informations</a>
           </div>
           <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
             <div class="card-body">
@@ -155,7 +199,7 @@
               <input type="text" id="firstName"><br>
               <label for="lastName" id="ln">Nom de Famille:</label>
               <input type="text" id="lastName"><br>
-              <label for="phone" id="phone">Numéro de Téléphone:</label>
+              <label for="phone" id="phoneLbl">Numéro de Téléphone:</label>
               <input type="text" id="phone"><br>
               <label for="email" id="emailLbl">Adresse Courriel:</label>
               <input type="text" id="email"><br>
