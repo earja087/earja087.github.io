@@ -1,0 +1,75 @@
+body {
+  padding: 50px;
+  background-color: #bf80ff;
+}
+
+#header {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 20px;
+  align: center;
+  background-color: royalblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.question {
+  font-family: arial;
+  text-align: left;
+}
+
+label, option, input {
+  margin: 5px;
+  font-family: arial;
+}
+
+div {
+  align: center;
+  border-radius: 15px;
+  border: 1.5px solid #000000;
+  padding: 10px 20px 30px 20px;
+  background-color: white;
+}
+
+table {
+  font-family: arial;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 7px;
+}
+
+th:nth-child(even) {
+  background-color: #f5e7d6;
+}
+
+td:nth-child(even) {
+  background-color: #f5e7d6;
+}
+
+#btnSubmit {
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  align-items: center;
+}

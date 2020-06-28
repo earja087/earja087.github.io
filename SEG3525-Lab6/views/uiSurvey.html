@@ -1,0 +1,170 @@
+<html>
+<head>
+  <title>SEG3525: Questionnaire d'IU</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link href="/assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <script src="/assets/action.js"></script>
+  <div id="header" class="container-md p-3 my-3 border bg-primary">
+    <h1 class="display-1">Questionnaire sur un UI</h1>
+  </div>
+  <br>
+  <form>
+    <h2> Ce questionnaire est pour obtenir votre opinion sur l'IU <a href="https://www.premierleague.com/">suivante</a>.</h2>
+    <br>
+    <img src="/assets/PremierLeagueHomePage.PNG" alt="https://www.premierleague.com" width="700px" height="350px">
+    <br>
+    <br>
+    <!-- Question 1 -->
+    <div class="container-md p-3 my-3 border bg-light">
+      <h5 class="question">1. Informations Personnelles:</h5>
+      <label for="name" id="fn">Nom:</label>
+      <input type="text" name="fullName" id="name"><br>
+      <label for="maleOption">Homme</label>
+      <input type="radio" class="radio" id="maleOption" name="gender" value="male"/>
+      <label for="femaleOption">Femme</label>
+      <input type="radio" class="radio" id="femaleOption" name="gender" value="female"/>
+    </div>
+    <!-- Question 2 & 3 - Un choix unique-->
+    <div class="container-md p-3 my-3 border bg-light">
+      <h5 class="question">2. Selon vous, quel est le meilleur trait de cette page?</h5>
+      <select id="best" name="bestTrait">
+        <option value="display">La disposition des éléments</option>
+        <option value="colours">Le choix de couleur</option>
+        <option value="usability">L'utilisabilité de la page</option>
+      </select>
+      <br>
+      <br>
+      <h5 class="question">3. Selon vous, quel est le trait le plus pire de cette page?</h5>
+      <select id="worst" name="worstTrait">
+        <option value="display">La disposition des éléments</option>
+        <option value="colours">Le choix de couleur</option>
+        <option value="usability">L'utilisabilité de la page</option>
+      </select>
+    </div>
+    <!-- Question 4 - Likert -->
+    <div class="container-md p-3 my-3 border bg-light">
+      <h5 class="question">4. Pour plus de meilleurs détails, remplissez le tableau suivant:</h5>
+      <table>
+        <tr>
+          <th></th>
+          <th>Très Insatisfait</th>
+          <th>Insatisfait</th>
+          <th>Neutre</th>
+          <th>Satisfait</th>
+          <th>Très Satisfait</th>
+        </tr>
+        <!-- Row 1 -->
+        <tr>
+          <td>Disposition</td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="displayTable" value="VeryUnsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="displayTable" value="Unsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="displayTable" value="Neutral"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="displayTable" value="Satisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="displayTable" value="VerySatisfied"/>
+          </td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+          <td>Utilisabilité</td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="usabilityTable" value="VeryUnsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="usabilityTable" value="Unsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="usabilityTable" value="Neutral"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="usabilityTable" value="Satisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="usabilityTable" value="VerySatisfied"/>
+          </td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+          <td>Fonctionnalité</td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="functionTable" value="VeryUnsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="functionTable" value="Unsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="functionTable" value="Neutral"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="functionTable" value="Satisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="functionTable" value="VerySatisfied"/>
+          </td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+          <td>Efficacité</td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="efficiencyTable" value="VeryUnsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="efficiencyTable" value="Unsatisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="efficiencyTable" value="Neutral"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="efficiencyTable" value="Satisfied"/>
+          </td>
+          <td>
+            <input type="radio" class="radio" id="likertTable" name="efficiencyTable" value="VerySatisfied"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Question 5 - Suggestions -->
+    <div class="container-md p-3 my-3 border bg-light">
+      <h5 class="question">5. Quel(s) aspect(s) pensez-vous qu'on pourrait ajouter/changer:</h5>
+      <input type="checkbox" id="box1" name="suggestions" value="ChangeDisplay">
+      <label for="box1"> Changer la disposition des éléments</label><br>
+      <input type="checkbox" id="box2" name="suggestions" value="RemoveDisplay">
+      <label for="box2"> Supprimer quelques éléments</label><br>
+      <input type="checkbox" id="box3" name="suggestions" value="ColourChoice">
+      <label for="box3"> Des couleurs différentes</label><br>
+      <input type="checkbox" id="box4" name="suggestions" value="Nothing">
+      <label for="box4"> Je ne changerai rien</label><br><br>
+    </div>
+    <!-- Question 6 - Commentaires -->
+    <div class="container-md p-3 my-3 border bg-light">
+      <h5 class="question">Si vous aviez des commentaires supplémentaires:</h5>
+      <textarea rows="6" cols="60" name="comment" form="usrform">Ajoutez-les ici...</textarea>
+      <br>
+      <br>
+      <button type="submit" id="btnSubmit" class="btn btn-danger">Soumettre</button>
+      <br>
+      <br>
+    </div>
+    <p><i><b>Site conçu par Elie Arja</b></i></p>
+  </form>
+</body>
+</html>

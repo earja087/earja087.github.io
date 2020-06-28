@@ -1,0 +1,69 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Nom</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].fullName %> :  <%= results[0][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Sexe</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].gender %> :  <%= results[1][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Meilleur Trait</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].bestTrait %> :  <%= results[2][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Pire Trait</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].worstTrait %> :  <%= results[3][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Disposition</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].displayTable %> :  <%= results[4][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Utilisabilité</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].usabilityTable %> :  <%= results[5][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Fonctionnalité</h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].functionTable %> :  <%= results[6][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Efficacite</h2>
+    <ul>
+    <% for (var i=0; i<results[7].length; i++){ %>
+        <li><%= results[7][i].efficiencyTable %> :  <%= results[7][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Suggestions</h2>
+    <ul>
+    <% for (var i=0; i<results[8].length; i++){ %>
+        <li><%= results[8][i].suggestions %> :  <%= results[8][i].count %></li>
+    <% } %>
+    </ul>
+</body>
+</html>
