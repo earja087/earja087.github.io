@@ -1,0 +1,22 @@
+{
+  "Title": {
+    "1": "About Us"
+  },
+
+  "Subtitle": {
+    "1": "1. Who we are",
+    "2": "2. What we offer",
+    "3": "3. Where to find us",
+    "4": "4. How to contact us"
+  },
+
+  "Text": {
+    "1": "We are an FC Barcelona fan club based in Ottawa, Canada.",
+    "2A": "Along with consistently updated FC Barcelona news, you can come and",
+    "2B": "join us at our pub to watch matchdays with fellow Culers!",
+    "3": "You can find us on 202 Sparks St to be immersed in matches with passionate fans.",
+    "4A": "Phone Number: (613) 123-4567",
+    "4B": "Email: culers-ott@fcb.ca",
+    "4C": "Instagram: @culers_ott"
+  }
+}

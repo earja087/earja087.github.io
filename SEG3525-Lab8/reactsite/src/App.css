@@ -1,0 +1,34 @@
+body {
+  background: #000066;
+  color: yellow;
+}
+
+p {
+  font-size: 12px;
+}
+
+pre {
+  font-size: 16px;
+  color: yellow;
+  font-family: Arial;
+}
+
+#trophies, #mid, #gk {
+  background-color: #b30000;
+  width: 100%;
+  padding: 25px;
+  border: 2px solid yellow;
+  border-radius: 5px;
+}
+
+#def, #fwd {
+  background-color: inherit;
+  width: 100%;
+  padding: 25px;
+  border: 2px solid yellow;
+  border-radius: 5px;
+}
+
+#counter {
+  font-size: 20px;
+}
